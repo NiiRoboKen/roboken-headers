@@ -1,0 +1,15 @@
+{
+  "$schema": "https://raw.githubusercontent.com/platformio/platformio-core/develop/platformio/assets/schema/library.json",
+  "name": "roboken-headers",
+  "version": "0.1.0",
+  "description": "ロボット研究部用のヘッダーファイル群",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Netetra/roboken-headers"
+  },
+  "frameworks": "*",
+  "platforms": "*",
+  "build": {
+    "libArchive": false
+  }
+}
