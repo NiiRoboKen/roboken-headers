@@ -3,6 +3,7 @@
 
 namespace roboken {
 #include "interface.h"
+#include "omni.h"
 }
 
 #endif
