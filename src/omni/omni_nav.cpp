@@ -14,8 +14,11 @@ void OmniNav::setRevolution(double v1, double v2, double v3) {
 }
 double OmniNav::getPositionX() {
   return (circumference *
-          (1 / 3 * ((2 * revolution1) - revolution2 - revolution3)));
+          (1.0 / 3.0 * ((2.0 * revolution1) - revolution2 - revolution3)));
 }
 double OmniNav::getPositionY() {
-  return (circumference * ((sqrt(3) / 3) * (revolution2 - revolution3)));
+  return (circumference * ((sqrt(3.0) / 3.0) * (revolution2 - revolution3)));
+}
+double OmniNav::getRadian(){
+  return ((1.0/(3.0*radius))*(revolution1 + revolution2 + revolution3));
 }

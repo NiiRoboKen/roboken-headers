@@ -9,13 +9,14 @@ class OmniNav {
       double v3);  // v1をX軸に水平,v2,v3をccwの順番のモータの回転数とする。
   double getPositionX();
   double getPositionY();
+  double getRadian();
 
  private:
   double radius;  // ロボット中心からのオムニホイールまでの距離
   double circumference;  // オムニホイールの円周の長さ
-  double revolution1;
-  double revolution2;
-  double revolution3;
+  double revolution1 = 0.0;
+  double revolution2 = 0.0;
+  double revolution3 = 0.0;
 };
 
 #endif
