@@ -2,6 +2,7 @@
 
 #include <math.h>
 
+/*TODO 初期座標および初期角度を考慮できるようにする*/
 OmniNav::OmniNav(double radius, double circumference) {
   this->radius = radius;
   this->circumference = circumference;
@@ -27,4 +28,14 @@ double OmniNav::getDeltaY() {
 double OmniNav::getDeltaRad() {
   return deltaRad = ((1.0 / (3.0 * radius)) *
                      (revolution1 + revolution2 + revolution3));
+}
+
+/*TODO getDeltaを実行しなくても動くようにする*/
+/*Xの絶対座標を取得*/
+double OmniNav::getPositionX() {
+  return ((deltaX * cos(deltaRad)) + (deltaY * cos(deltaRad)));
+}
+/*Yの絶対座標を取得*/
+double OmniNav::getPositionY() {
+  return ((deltaX * sin(deltaRad)) - (deltaY * sin(deltaRad)));
 }

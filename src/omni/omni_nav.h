@@ -6,11 +6,14 @@ class OmniNav {
   OmniNav(double radius, double circumference);
   void setRevolution(
       double v1, double v2,
-      double v3);  // v1をX軸に水平,v2,v3をccwの順番のモータの回転数とする。
-  double getDeltaX();
-  double getDeltaY();
-  double getDeltaRad();
+      double v3);  // v1をX軸に水平，下向き,v2,v3をccwの順番のモータの回転数
 
+  double getDeltaX();    // xの移動距離を取得
+  double getDeltaY();    // Yの移動距離を取得
+  double getDeltaRad();  // 回転角度を取得
+
+  double getPositionX();  // xの絶対座標を取得
+  double getPositionY();  // yの絶対座標を取得
  private:
   double radius;  // ロボット中心からのオムニホイールまでの距離
   double circumference;  // オムニホイールの円周の長さ
